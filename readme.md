@@ -13,6 +13,7 @@ In this assignment, you have the task to develop a portfolio website with its ow
 ## Assignment Directions
 
 - See the mockup folder for examples, try your best to make your pages matches with the mockup such as color, header texts, sizes and others (description text like lorem ipsum may different)
+- **Remove all sea atributes** from your final result such as logo, company name or address.
 - Apply best practices on naming project folders, HTML, CSS and JS conventions
 - You **may use** Bootstrap framework for CSS and Javascript.
 - You **may use** images, fonts, and starter CSS in the assets folder
@@ -103,3 +104,22 @@ New Transaction
 - Entering zero as amount will show up as income in history
 - Negative amount will add the total expense, but it will decrease the balance
 - Positive amount will add the total income and the balance
+
+### Login and Register Page
+
+- [Figma Design Reference](<https://www.figma.com/file/e1WfmEUCbJ8quMSAqsvEGm/(Draft)-Assignment-Web?type=design&node-id=0-1&mode=design>)
+
+Login
+
+- Login will have required and email validation
+- Password field should be a password input
+- After logging in, redirect to home page and store the email in local storage
+
+Register
+
+- Register will have required and email validation
+- Password field should be a password input
+
+### Deployment
+
+You must deploy your website to online hosting (e.g: Vercel, Netlify)
