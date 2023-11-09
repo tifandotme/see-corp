@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap");
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --#{$prefix}font-sans-serif: "Open Sans", sans-serif;
+  --#{$prefix}navbar-active-color: #{$blue-500};
+}
+
+.navbar-nav {
+  --#{$prefix}nav-link-color: #{$gray-600};
+  --#{$prefix}nav-link-font-weight: 700;
+  --#{$prefix}nav-link-padding-y: 1rem;
+  --#{$prefix}nav-link-padding-x: 2rem;
+
+  @extend .text-uppercase;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../../assets/img/direction-right.png");
+  width: 28px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../../assets/img/direction-left.png");
+  width: 28px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: fit-content;
+  opacity: 1;
+}
