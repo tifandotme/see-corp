@@ -214,10 +214,26 @@ $font-serif: "Noto Serif", serif;
       border: 1px solid $gray-600;
       @extend .my-auto;
     }
-    .active{
+    .active {
       background-color: white;
       height: 15px;
       width: 15px;
     }
+  }
+}
+
+.offered-course {
+  padding: 1.4rem;
+  background-color: $gray-200;
+  &__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+  }
+  &__text {
+    line-height: 1.5;
+    font-size: 0.85rem;
+    color: $gray-700;
+    margin-bottom: 0;
   }
 }
