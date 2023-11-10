@@ -125,6 +125,13 @@ body {
     border-right-width: 8px;
     border-right-style: solid;
 
+    span:first-child {
+      width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     &--income {
       border-color: $income-color;
     }
