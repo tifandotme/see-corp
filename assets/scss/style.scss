@@ -139,7 +139,16 @@ $font-serif: "Noto Serif", serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(
+      0% 0%,
+      80% 0%,
+      100% 0%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
 
     &#web {
       background-color: $red-400;
@@ -170,5 +179,45 @@ $font-serif: "Noto Serif", serif;
   &__text {
     font-size: 0.85rem;
     color: $gray-800;
+  }
+}
+
+#carouselQuotes {
+  margin-bottom: 4rem;
+  background-color: $gray-200;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .blockquote {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .blockquote-footer {
+    margin-top: 0;
+    font-weight: 700;
+    color: $gray-900;
+    &::before {
+      content: "- ";
+    }
+    &::after {
+      content: " -";
+    }
+  }
+  .carousel-indicators {
+    bottom: 20px;
+
+    [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      background-color: $gray-400;
+      border: 1px solid $gray-600;
+      @extend .my-auto;
+    }
+    .active{
+      background-color: white;
+      height: 15px;
+      width: 15px;
+    }
   }
 }
