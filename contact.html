@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - SEE Corp.</title>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar container d-flex justify-content-between py-4 px-3" aria-label="Site menu">
+    <img width="85px" src="assets/img/logo.png" alt="Logo" />
+
+    <ul id="desktopNavbarContent" class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about-us.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="/courses.html">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link active" href="/contact.html" aria-current="page">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="/tracker.html">Tracker</a></li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarContent"
+      aria-controls="mobileNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div id="mobileNavbarContent" class="collapse navbar-collapse container">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about-us.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="/courses.html">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link active" href="/contact.html" aria-current="page">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="/tracker.html">Tracker</a></li>
+    </ul>
+  </div>
+
+  <header class="section-header">
+    <h2 class="section-header__text">Contact Us</h2>
+  </header>
+
+  <section class="section-content container my-5">
+    <div class="row row-cols-1 row-cols-sm-2">
+      <div class="col">
+        <form id="messageForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name*</label>
+            <input type="text" class="form-control" id="name" aria-describedby="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject*</label>
+            <input type="text" class="form-control" id="subject">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message*</label>
+            <textarea class="form-control" id="message" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn--brand">Submit</button>
+        </form>
+      </div>
+      <div class="col">
+        <h3 class="section-content__title">Contact Info</h3>
+        <p class="fw-bolder">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.</p>
+        <p><strong>SEE Corp.<br>Sauron Tower,<br>Indonesia. ABC 12 Kav 11.</strong><br>Telephone: +1 234 567 89<br>FAX:
+          +1 234 567 89<br>E-mail: <a href="mailto:example@see.com" class="text-decoration-none">example@see.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__top container">
+      <div class="site-footer__column">
+        <h3 class="site-footer__title">Our Contact</h3>
+        <div class="site-footer__contacts">
+          <span class="fw-bold">SEE Corp.</span>
+          <span>Sauron Tower</span>
+          <span>Pin-1238 Indonesia</span>
+          <br class="my-4">
+          <span>(123) 234-12312</span>
+          <span>example@see.com</span>
+        </div>
+      </div>
+      <div class="site-footer__column">
+        <h3 class="site-footer__title">Quick Links</h3>
+        <ul class="site-footer__list">
+          <li>Latest Events</li>
+          <li>Terms and conditions</li>
+          <li>Privacy policy</li>
+          <li>Career</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+      <div class="site-footer__column">
+        <h3 class="site-footer__title">Latest Posts</h3>
+        <ul class="site-footer__list">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</li>
+        </ul>
+      </div>
+      <div class="site-footer__column">
+        <h3 class="site-footer__title">Recent News</h3>
+        <ul class="site-footer__list">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <div class="site-footer__copyright">@ SEE Corp. All right reserved.</div>
+      <div class="site-footer__socials">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-linkedin"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/index.js"></script>
+</body>
+
+</html>
