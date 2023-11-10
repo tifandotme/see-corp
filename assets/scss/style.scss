@@ -14,10 +14,46 @@ $font-serif: "Noto Serif", serif;
 .navbar-nav {
   --#{$prefix}nav-link-color: #{$gray-600};
   --#{$prefix}nav-link-font-weight: 700;
-  --#{$prefix}nav-link-padding-y: 1rem;
-  --#{$prefix}nav-link-padding-x: 2rem;
 
   @extend .text-uppercase;
+}
+
+.navbar-toggler {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+#mobileNavbarContent {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  &.navbar-nav {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  .nav-link {
+    padding: 1rem 1.5rem;
+  }
+}
+
+#desktopNavbarContent {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  &.navbar-nav {
+    flex-direction: row;
+    font-size: 1rem;
+  }
+  .nav-link {
+    padding: 1rem 0.8rem;
+    font-size: 0.75rem;
+    &.active {
+      color: $blue-500;
+    }
+  }
 }
 
 .carousel-control-next-icon {
