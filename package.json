@@ -3,7 +3,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "css:watch": "sass --watch assets/scss/style.scss assets/css/style.css"
+    "css:watch": "sass --watch assets/scss:assets/css"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
