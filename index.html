@@ -29,43 +29,210 @@
   </div>
 
   <div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/slides/1.jpg" class="d-block w-100" alt="Slide 1 image">
+        <div class="carousel-caption">
+          <div class="carousel-caption__content">
+            <h5 class="fs-2 fw-bold">College Education</h5>
+            <p class="fs-6 fw-semibold">Awesome Template get it now</p>
+            <button type="button" class="btn btn-primary btn--pricing" data-bs-toggle="modal"
+              data-bs-target="#pricingModal">See Pricing</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/slides/2.jpg" class="d-block w-100" alt="Slide 2 image">
+        <div class="carousel-caption">
+          <div class="carousel-caption__content">
+            <h5 class="fs-2 fw-bold">College Education</h5>
+            <p class="fs-6 fw-semibold">Awesome Template get it now</p>
+            <button type="button" class="btn btn-primary btn--pricing" data-bs-toggle="modal"
+              data-bs-target="#pricingModal">See Pricing</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/slides/3.jpg" class="d-block w-100" alt="Slide 3 image">
+        <div class="carousel-caption">
+          <div class="carousel-caption__content">
+            <h5 class="fs-2 fw-bold">College Education</h5>
+            <p class="fs-6 fw-semibold">Awesome Template get it now</p>
+            <button type="button" class="btn btn-primary btn--pricing" data-bs-toggle="modal"
+              data-bs-target="#pricingModal">See Pricing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/img/slides/1.jpg" class="d-block w-100" alt="Slide 1 image">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/img/slides/2.jpg" class="d-block w-100" alt="Slide 2 image">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/img/slides/3.jpg" class="d-block w-100" alt="Slide 3 image">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+
+  <div class="modal fade" id="pricingModal" tabindex="-1" aria-labelledby="pricingModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-6 fw-bolder" id="pricingModal">Pricing</>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between gap-3 flex-lg-row flex-column">
+            <div class="card text-center">
+              <div class="card-header">
+                <h3 class="card-header__tier">Basic</h3>
+                <span class="card-header__price">$15.00 / Year</span>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Responsive Design</li>
+                <li class="list-group-item">Bootstrap Design</li>
+                <li class="list-group-item">Unlimited Support</li>
+                <li class="list-group-item">Free Trial version</li>
+                <li class="list-group-item">HTML5 CSS3 jQuery</li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn--pricing">Get Now</button>
+              </div>
+            </div>
+
+            <div class="card text-center">
+              <div class="card-header">
+                <h3 class="card-header__tier">Basic</h3>
+                <span class="card-header__price">$15.00 / Year</span>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Responsive Design</li>
+                <li class="list-group-item">Bootstrap Design</li>
+                <li class="list-group-item">Unlimited Support</li>
+                <li class="list-group-item">Free Trial version</li>
+                <li class="list-group-item">HTML5 CSS3 jQuery</li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn--pricing">Get Now</button>
+              </div>
+            </div>
+
+            <div class="card text-center">
+              <div class="card-header">
+                <h3 class="card-header__tier">Basic</h3>
+                <span class="card-header__price">$15.00 / Year</span>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Responsive Design</li>
+                <li class="list-group-item">Bootstrap Design</li>
+                <li class="list-group-item">Unlimited Support</li>
+                <li class="list-group-item">Free Trial version</li>
+                <li class="list-group-item">HTML5 CSS3 jQuery</li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn--pricing">Get Now</button>
+              </div>
+            </div>
+
+            <div class="card text-center">
+              <div class="card-header">
+                <h3 class="card-header__tier">Basic</h3>
+                <span class="card-header__price">$15.00 / Year</span>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Responsive Design</li>
+                <li class="list-group-item">Bootstrap Design</li>
+                <li class="list-group-item">Unlimited Support</li>
+                <li class="list-group-item">Free Trial version</li>
+                <li class="list-group-item">HTML5 CSS3 jQuery</li>
+              </ul>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn--pricing">Get Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
+  <section class="container my-5">
+    <div class="text-center">
+      <h3 class="fs-2 fw-bolder">Our Featured Courses</h3>
+      <p class="text-body-secondary my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+      <div class="col">
+        <div class="featured-course">
+          <div id="web" class="featured-course__header">
+            <i class="bi bi-trophy-fill"></i>
+          </div>
+          <div class="featured-course__body">
+            <h4 class="featured-course__title">Web Development</h4>
+            <p class="featured-course__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="featured-course">
+          <div id="ui" class="featured-course__header">
+            <i class="bi bi-card-image"></i>
+          </div>
+          <div class="featured-course__body">
+            <h4 class="featured-course__title">UI Design</h4>
+            <p class="featured-course__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="featured-course">
+          <div id="interraction" class="featured-course__header">
+            <i class="bi bi-display"></i>
+          </div>
+          <div class="featured-course__body">
+            <h4 class="featured-course__title">Interraction</h4>
+            <p class="featured-course__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="featured-course">
+          <div id="ux" class="featured-course__header">
+            <i class="bi bi-globe-americas"></i>
+          </div>
+          <div class="featured-course__body">
+            <h4 class="featured-course__title">User Experience</h4>
+            <p class="featured-course__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <script type="module" src="assets/js/index.js"></script>
 </body>
 
