@@ -1,17 +1,25 @@
+function formatToIDR(amount) {
+  return new Intl.NumberFormat("id-ID", {
+    currency: "IDR",
+    style: "currency",
+    maximumFractionDigits: 0,
+  }).format(amount)
+}
+
 function getItems() {
-  return JSON.parse(localStorage.getItem("items")) || []
+  return JSON.parse(localStorage.getItem("history")) || []
 }
 
 function setItems(items) {
-  localStorage.setItem("items", JSON.stringify(items))
+  localStorage.setItem("history", JSON.stringify(items))
 }
 
-function renderItems() {
+function render() {
   const items = getItems()
 
-  const list = document.getElementById("history")
+  const historyEl = document.getElementById("history")
 
-  list.innerHTML = ""
+  historyEl.innerHTML = ""
 
   items.forEach((item) => {
     const li = document.createElement("li")
@@ -24,8 +32,28 @@ function renderItems() {
       <span>${item.name}</span>
       <span>${item.amount}</span>
     `
-    list.appendChild(li)
+    historyEl.appendChild(li)
   })
+
+  const balance = items.reduce((acc, { amount }) => acc + Number(amount), 0)
+
+  const balanceEl = document.getElementById("balance")
+  balanceEl.innerHTML = formatToIDR(balance)
+
+  const income = items.reduce(
+    (acc, { amount }) => (amount > 0 ? acc + Number(amount) : acc),
+    0
+  )
+  const expense = items.reduce(
+    (acc, { amount }) => (amount < 0 ? acc + Number(amount) : acc),
+    0
+  )
+
+  const incomeEl = document.getElementById("income")
+  incomeEl.innerHTML = formatToIDR(income)
+
+  const expenseEl = document.getElementById("expense")
+  expenseEl.innerHTML = formatToIDR(expense)
 }
 
 /**
@@ -41,7 +69,7 @@ function onSubmit(e) {
 
   if (Number(amount) === 0) {
     alert("Amount cannot be empty")
-    form.reset()
+    formEl.reset()
     return
   }
 
@@ -50,18 +78,18 @@ function onSubmit(e) {
     amount,
   }
 
-  const items = getItems()
+  const history = getItems()
 
-  items.push(data)
+  history.push(data)
 
-  setItems(items)
+  setItems(history)
 
-  renderItems()
-  form.reset()
+  render()
+  formEl.reset()
 }
 
 // render initial items from existing data
-renderItems()
+render()
 
-const form = document.getElementById("form")
-form.addEventListener("submit", onSubmit)
+const formEl = document.getElementById("form")
+formEl.addEventListener("submit", onSubmit)
