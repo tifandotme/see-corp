@@ -24,7 +24,7 @@ function render() {
   items.forEach((item) => {
     const li = document.createElement("li")
 
-    const type = item.amount > 0 ? "income" : "expense"
+    const type = item.amount >= 0 ? "income" : "expense"
 
     li.setAttribute("class", `history__item history__item--${type}`)
 
@@ -63,12 +63,6 @@ function onSubmit(e) {
 
   const name = formFields.name.value
   const amount = formFields.amount.value
-
-  if (Number(amount) === 0) {
-    alert("Amount cannot be empty")
-    formEl.reset()
-    return
-  }
 
   const data = {
     name,
