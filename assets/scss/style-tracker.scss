@@ -1,1 +1,164 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap");
+@import url("https://unpkg.com/reset-css@5.0.2/reset.css");
+
+$background: hsl(0, 0%, 97%);
+$accent: hsl(230, 22%, 23%);
+$text-primary: hsl(0, 0%, 9%);
+$text-secondary: hsl(228, 12%, 44%);
+
+$income-color: hsl(163, 72%, 41%);
+$expense-color: hsl(356, 69%, 56%);
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: $background;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  @extend .container;
+
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  &__nav {
+    margin: 3.5rem 0;
+  }
+  &__title {
+    margin-bottom: 3rem;
+  }
+}
+
+.main {
+  @extend .container;
+
+  background-color: white;
+  border-radius: 2rem 3rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.section {
+  margin-top: 3rem;
+
+  &__heading {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+  }
+  &__content {
+    margin: 1.5rem 0;
+  }
+}
+.balance {
+  margin-bottom: 1rem;
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &__amount {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+}
+
+.cashflow {
+  display: flex;
+  justify-content: center;
+  margin: 4.5rem 0;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__divider {
+    border-style: inset;
+    border-width: 1px;
+    border-color: black;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &__amount {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &--income {
+      color: $income-color;
+    }
+    &--expense {
+      color: $expense-color;
+    }
+  }
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: $text-secondary;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    border-right-width: 8px;
+    border-right-style: solid;
+
+    &--income {
+      border-color: $income-color;
+    }
+    &--expense {
+      border-color: $expense-color;
+    }
+  }
+}
+
+.transaction-form {
+  &__control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &__input {
+    padding: 0.7rem;
+    border: 1px solid hsl(0, 0%, 80%);
+    font-size: 0.8rem;
+  }
+  &__submit-btn {
+    width: 100%;
+    padding: 0.8rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: $accent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

@@ -6,11 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tracker - SEE Corp.</title>
 
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style-tracker.css" rel="stylesheet">
 </head>
 
 <body>
-  <script type="module" src="assets/js/index.js"></script>
+  <header class="header">
+    <nav class="header__nav"><a href="/">Home</a></nav>
+    <h1 class="header__title">Expense Tracker</h1>
+  </header>
+
+  <main class="main">
+    <section class="balance">
+      <div class="balance__label">YOUR BALANCE</div>
+      <div class="balance__amount">Rp-500.000</div>
+    </section>
+
+    <section class="cashflow">
+      <div class="cashflow__column">
+        <div class="cashflow__label">INCOME</div>
+        <div class="cashflow__amount cashflow__amount--income">Rp. 50.000</div>
+      </div>
+      <div class="cashflow__divider"></div>
+      <div class="cashflow__column">
+        <div class="cashflow__label">EXPENSE</div>
+        <div class="cashflow__amount cashflow__amount--expense">Rp. 50.000</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__heading">History</h2>
+      <div class="section__content">
+        <div class="history">
+          <div class="history__item history__item--income">
+            <div class="history__transaction-name">Buy groceries</div>
+            <div class="history__transaction-amount">-100.000</div>
+          </div>
+          <div class="history__item history__item--expense">
+            <div>Buy groceries</div>
+            <div>-100.000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__heading">New transaction</h2>
+      <div class="section__content">
+        <form class="transaction-form">
+          <div class="transaction-form__control">
+            <label for="transaction-name" class="transaction-form__label">Transaction Details</label>
+            <input type="text" id="transaction-name" name="transaction-name" placeholder="Enter details ..."
+              class="transaction-form__input">
+          </div>
+          <div class="transaction-form__control">
+            <label for="transaction-amount" class="transaction-form__label">Amount (negative - expense, positive -
+              income)</label>
+            <input type="number" id="transaction-amount" name="transaction-amount" placeholder="Enter amount..."
+              class="transaction-form__input">
+          </div>
+
+          <button class="transaction-form__submit-btn" type="submit">Add transaction</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/tracker.js"></script>
 </body>
 
 </html>
