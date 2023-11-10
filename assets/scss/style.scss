@@ -5,10 +5,11 @@
 $font-sans-serif: "Open Sans", sans-serif;
 $font-serif: "Noto Serif", serif;
 
+$accent-color: hsl(208, 97%, 46%);
+
 :root {
   --#{$prefix}font-sans-serif: #{$font-sans-serif};
   --#{$prefix}font-serif: "Noto Serif", serif;
-  --#{$prefix}navbar-active-color: #{$blue-500};
 }
 
 .navbar-nav {
@@ -34,6 +35,9 @@ $font-serif: "Noto Serif", serif;
   }
   .nav-link {
     padding: 1rem 1.5rem;
+    &.active {
+      color: $accent-color;
+    }
   }
 }
 
@@ -49,9 +53,9 @@ $font-serif: "Noto Serif", serif;
   }
   .nav-link {
     padding: 1rem 0.8rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     &.active {
-      color: $blue-500;
+      color: $accent-color;
     }
   }
 }
@@ -271,5 +275,62 @@ $font-serif: "Noto Serif", serif;
     font-size: 0.85rem;
     color: $gray-700;
     margin-bottom: 0;
+  }
+}
+
+.site-footer {
+  background-color: $accent-color;
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  gap: 4rem;
+
+  &__top {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }
+  &__column {
+    width: 100%;
+  }
+  &__title {
+    font-size: inherit;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    li:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }
+  &__copyright {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  &__socials {
+    display: flex;
+    gap: 1rem;
   }
 }
