@@ -334,3 +334,61 @@ $accent-color: hsl(208, 97%, 46%);
     gap: 1rem;
   }
 }
+
+/* ABOUT US */
+
+.section-header {
+  background-color: $accent-color;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    @extend .container;
+  }
+}
+
+.section-content {
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  span,
+  p,
+  li {
+    font-size: 0.95rem;
+    color: $gray-700;
+  }
+  ul {
+    list-style: inside;
+    list-style-image: url("../../node_modules/bootstrap-icons/icons/arrow-right-circle-fill.svg");
+  }
+}
+
+.btn.btn--readmore {
+  border-color: hsla(204, 60%, 49%, 1);
+  background-color: hsla(204, 60%, 49%, 1);
+  padding: 0.375rem 1.2rem;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+#accordionOurSolution {
+  .accordion-button {
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: $gray-500;
+    color: white;
+
+    &::after {
+      all: unset;
+    }
+    &:not(last-child) {
+      margin-bottom: 0.2rem;
+    }
+  }
+}
