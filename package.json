@@ -7,8 +7,7 @@
     "css:build": "sass assets/scss:assets/css --no-source-map"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2",
-    "bootstrap-icons": "^1.11.1"
+    "bootstrap": "^5.3.2"
   },
   "devDependencies": {
     "sass": "^1.69.5"
