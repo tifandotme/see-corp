@@ -36,10 +36,6 @@ function render() {
   })
 
   const balance = items.reduce((acc, { amount }) => acc + Number(amount), 0)
-
-  const balanceEl = document.getElementById("balance")
-  balanceEl.innerHTML = formatToIDR(balance)
-
   const income = items.reduce(
     (acc, { amount }) => (amount > 0 ? acc + Number(amount) : acc),
     0
@@ -49,9 +45,10 @@ function render() {
     0
   )
 
+  const balanceEl = document.getElementById("balance")
+  balanceEl.innerHTML = formatToIDR(balance)
   const incomeEl = document.getElementById("income")
   incomeEl.innerHTML = formatToIDR(income)
-
   const expenseEl = document.getElementById("expense")
   expenseEl.innerHTML = formatToIDR(expense)
 }
